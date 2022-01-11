@@ -12,6 +12,7 @@ build-type:     Simple
 
 library
   exposed-modules:
+      Calculator
       NanoParsec
   other-modules:
       Paths_nano_parsec

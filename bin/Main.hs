@@ -1,4 +1,10 @@
 module Main (main) where
 
+import Calculator
+import Control.Monad
+
 main :: IO ()
-main = putStrLn "Hello nano-parsec!"
+main = forever $ do
+  putStr "> "
+  a <- getLine
+  print $ eval $ run a
