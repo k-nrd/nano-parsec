@@ -60,7 +60,7 @@ combine p q = Parser (\s -> parse p s ++ parse q s)
 failure :: Parser a
 failure = Parser (const [])
 
--- Returns parser composed with the second parser if the first one fails, else it composes with the first parser
+-- Returns parser equal to the second parser if the first one fails, else it's equal with the first parser
 option :: Parser a -> Parser a -> Parser a
 option p q = Parser $ \s ->
   case parse p s of
